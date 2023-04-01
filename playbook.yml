@@ -1,0 +1,15 @@
+---
+  - name: install and configure backup
+    hosts: backup
+    become: yes
+
+    roles: 
+     - backup
+     
+  - name: install and configure client
+    hosts: client
+    become: yes
+ 
+    roles: 
+      - client
+...
